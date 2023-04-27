@@ -11,6 +11,7 @@
 		D676A6ED29FB0B9900A56486 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676A6EC29FB0B9900A56486 /* LaunchView.swift */; };
 		D676A6EF29FB0B9900A56486 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D676A6EE29FB0B9900A56486 /* Assets.xcassets */; };
 		D676A6F229FB0B9900A56486 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D676A6F129FB0B9900A56486 /* Preview Assets.xcassets */; };
+		D676A6FC29FB0DD000A56486 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676A6FB29FB0DD000A56486 /* ContentModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		D676A6EC29FB0B9900A56486 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		D676A6EE29FB0B9900A56486 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D676A6F129FB0B9900A56486 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D676A6FB29FB0DD000A56486 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		D676A6FA29FB0C1100A56486 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				D676A6FB29FB0DD000A56486 /* ContentModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			files = (
 				D676A6ED29FB0B9900A56486 /* LaunchView.swift in Sources */,
 				D676A6EB29FB0B9900A56486 /* City_Navigation_App.swift in Sources */,
+				D676A6FC29FB0DD000A56486 /* ContentModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +297,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"City Navigation App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "City-Navigation-App-Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Grant permission to find restaurants and sights near you ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -321,6 +327,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"City Navigation App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "City-Navigation-App-Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Grant permission to find restaurants and sights near you ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
