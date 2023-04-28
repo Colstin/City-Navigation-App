@@ -21,6 +21,7 @@
 		D676A6EE29FB0B9900A56486 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D676A6F129FB0B9900A56486 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D676A6FB29FB0DD000A56486 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
+		D676A6FE29FB2BEF00A56486 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +38,7 @@
 		D676A6DE29FB0B9900A56486 = {
 			isa = PBXGroup;
 			children = (
+				D676A6FE29FB2BEF00A56486 /* README.md */,
 				D676A6E929FB0B9900A56486 /* City Navigation App */,
 				D676A6E829FB0B9900A56486 /* Products */,
 			);
