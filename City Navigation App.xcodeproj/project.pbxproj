@@ -12,6 +12,7 @@
 		D676A6EF29FB0B9900A56486 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D676A6EE29FB0B9900A56486 /* Assets.xcassets */; };
 		D676A6F229FB0B9900A56486 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D676A6F129FB0B9900A56486 /* Preview Assets.xcassets */; };
 		D676A6FC29FB0DD000A56486 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676A6FB29FB0DD000A56486 /* ContentModel.swift */; };
+		D676A70429FC517E00A56486 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D676A70329FC517E00A56486 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		D676A6F129FB0B9900A56486 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D676A6FB29FB0DD000A56486 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		D676A6FE29FB2BEF00A56486 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D676A70329FC517E00A56486 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +41,7 @@
 			isa = PBXGroup;
 			children = (
 				D676A6FE29FB2BEF00A56486 /* README.md */,
+				D676A70329FC517E00A56486 /* .gitignore */,
 				D676A6E929FB0B9900A56486 /* City Navigation App */,
 				D676A6E829FB0B9900A56486 /* Products */,
 			);
@@ -59,6 +62,7 @@
 				D676A6F829FB0BC500A56486 /* Views */,
 				D676A6FA29FB0C1100A56486 /* ViewModels */,
 				D676A6F929FB0BDA00A56486 /* Models */,
+				D676A6FF29FC4BE600A56486 /* Utilites */,
 				D676A6EE29FB0B9900A56486 /* Assets.xcassets */,
 				D676A6F029FB0B9900A56486 /* Preview Content */,
 			);
@@ -94,6 +98,13 @@
 				D676A6FB29FB0DD000A56486 /* ContentModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D676A6FF29FC4BE600A56486 /* Utilites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D676A6F229FB0B9900A56486 /* Preview Assets.xcassets in Resources */,
+				D676A70429FC517E00A56486 /* .gitignore in Resources */,
 				D676A6EF29FB0B9900A56486 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
