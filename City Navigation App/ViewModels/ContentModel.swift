@@ -49,8 +49,8 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject{
             locationManager.stopUpdatingLocation()
             
             // if we have the coordinates of the user, send into the yelp API
-            //getBuisnesses(category: "arts", location: userLocation!)
-            getBuisnesses(category: "restaurants", location: userLocation!)
+            //getBuisnesses(category: "\(Constants.sightsKey)", location: userLocation!)
+            getBuisnesses(category: "\(Constants.restaurantsKey)", location: userLocation!)
         }
     }
 
@@ -65,7 +65,7 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject{
         //5. Start Data Task
       
         //1.
-        var urlComponents = URLComponents(string: "https://api.yelp.com/v3/businesses/search")
+        var urlComponents = URLComponents(string: "\(Constants.apiUrl)")
         urlComponents?.queryItems = [
             URLQueryItem(name: "latitude", value: String(location.coordinate.latitude)),
             URLQueryItem(name: "longitude", value: String(location.coordinate.longitude)),
@@ -82,7 +82,7 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject{
         //2.
         var request = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10.0)
         request.httpMethod = "GET"
-        request.addValue("Bearer mm9vAWCcQu50GIwKPd_XN9XlabM8xcnxgMVlGmdmFwVXLgFOXSJasOa7ZFcZ0cL35RbbbvWdW9X05vEmK_CTPGob5K-KR5CDMPldqq3c2KFvRIXcwu7DbAe3h_5KZHYx", forHTTPHeaderField: "Authorization")
+        request.addValue("Bearer \(Constants.apiKey)", forHTTPHeaderField: "Authorization")
         
         
         // 3.
@@ -90,7 +90,7 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject{
         let dataTask = session.dataTask(with: request) { data, response, error in
             //check that there isn't an error
             
-            guard error == nil else{
+            guard error != nil else{
                 print("There is an error")
                 return
             }
