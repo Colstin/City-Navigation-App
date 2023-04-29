@@ -16,6 +16,10 @@
 		D676A70629FC524600A56486 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676A70529FC524600A56486 /* Constants.swift */; };
 		D676A70829FC58AA00A56486 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676A70729FC58AA00A56486 /* Business.swift */; };
 		D676A70A29FC5C9400A56486 /* BusinessSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676A70929FC5C9400A56486 /* BusinessSearch.swift */; };
+		D676A70F29FD99F900A56486 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676A70E29FD99F900A56486 /* HomeView.swift */; };
+		D676A71229FD9F5100A56486 /* BusinessList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676A71129FD9F5100A56486 /* BusinessList.swift */; };
+		D676A71429FDA49700A56486 /* BusinessListSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676A71329FDA49700A56486 /* BusinessListSectionHeader.swift */; };
+		D676A71629FDA5CE00A56486 /* BusinessListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676A71529FDA5CE00A56486 /* BusinessListSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		D676A70529FC524600A56486 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D676A70729FC58AA00A56486 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		D676A70929FC5C9400A56486 /* BusinessSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSearch.swift; sourceTree = "<group>"; };
+		D676A70E29FD99F900A56486 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D676A71129FD9F5100A56486 /* BusinessList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessList.swift; sourceTree = "<group>"; };
+		D676A71329FDA49700A56486 /* BusinessListSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListSectionHeader.swift; sourceTree = "<group>"; };
+		D676A71529FDA5CE00A56486 /* BusinessListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				D676A6EC29FB0B9900A56486 /* LaunchView.swift */,
+				D676A70D29FD99D300A56486 /* Home */,
+				D676A70C29FD99C800A56486 /* Denied */,
+				D676A70B29FD99AF00A56486 /* Onboarding */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,6 +125,39 @@
 				D676A70529FC524600A56486 /* Constants.swift */,
 			);
 			path = Utilites;
+			sourceTree = "<group>";
+		};
+		D676A70B29FD99AF00A56486 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D676A70C29FD99C800A56486 /* Denied */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Denied;
+			sourceTree = "<group>";
+		};
+		D676A70D29FD99D300A56486 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D676A70E29FD99F900A56486 /* HomeView.swift */,
+				D676A71029FD9F3200A56486 /* List */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D676A71029FD9F3200A56486 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				D676A71129FD9F5100A56486 /* BusinessList.swift */,
+				D676A71329FDA49700A56486 /* BusinessListSectionHeader.swift */,
+				D676A71529FDA5CE00A56486 /* BusinessListSection.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,10 +231,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D676A71429FDA49700A56486 /* BusinessListSectionHeader.swift in Sources */,
 				D676A6ED29FB0B9900A56486 /* LaunchView.swift in Sources */,
+				D676A70F29FD99F900A56486 /* HomeView.swift in Sources */,
 				D676A6EB29FB0B9900A56486 /* City_Navigation_App.swift in Sources */,
 				D676A6FC29FB0DD000A56486 /* ContentModel.swift in Sources */,
 				D676A70829FC58AA00A56486 /* Business.swift in Sources */,
+				D676A71229FD9F5100A56486 /* BusinessList.swift in Sources */,
+				D676A71629FDA5CE00A56486 /* BusinessListSection.swift in Sources */,
 				D676A70629FC524600A56486 /* Constants.swift in Sources */,
 				D676A70A29FC5C9400A56486 /* BusinessSearch.swift in Sources */,
 			);
