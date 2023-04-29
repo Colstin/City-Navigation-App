@@ -11,6 +11,8 @@ import CoreLocation
 class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject{
    
     var locationManager = CLLocationManager()
+    @Published var restaurants = [Business]()
+    @Published var sights = [Business]()
     
     override init() {
         // Init method of NSObject
@@ -49,7 +51,7 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject{
             locationManager.stopUpdatingLocation()
             
             // if we have the coordinates of the user, send into the yelp API
-            //getBuisnesses(category: "\(Constants.sightsKey)", location: userLocation!)
+            getBuisnesses(category: "\(Constants.sightsKey)", location: userLocation!)
             getBuisnesses(category: "\(Constants.restaurantsKey)", location: userLocation!)
         }
     }
@@ -62,7 +64,8 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject{
         //2. Create URL Request
         //3. Get URLSession
         //4. Create Data Task
-        //5. Start Data Task
+        //5. parse Json
+        //6. Start Data Task
       
         //1.
         var urlComponents = URLComponents(string: "\(Constants.apiUrl)")
@@ -87,15 +90,43 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject{
         
         // 3.
         let session = URLSession.shared
+        //4.
         let dataTask = session.dataTask(with: request) { data, response, error in
             //check that there isn't an error
             
-            guard error != nil else{
+            guard error == nil else{
                 print("There is an error")
                 return
             }
             
-            
+            //5.
+            do{
+                let decoder = JSONDecoder()
+                let result = try decoder.decode(BusinessSearch.self, from: data!)
+                
+                DispatchQueue.main.async {
+                    /*
+                    if category == "\(Constants.sightsKey)" {
+                        self.sights = result.businesses
+                        
+                    } else if category == "\(Constants.restaurantsKey)" {
+                        self.restaurants = result.businesses
+                    }
+                    */
+                    switch category{
+                    case Constants.sightsKey:
+                        self.sights = result.businesses
+                    case Constants.restaurantsKey:
+                        self.restaurants = result.businesses
+                    default:
+                        break
+                    }
+                }
+                
+            } catch {
+                print(error)
+            }
+   
             
         }
         dataTask.resume()
