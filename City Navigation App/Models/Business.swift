@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Business: Decodable, Identifiable{
+class Business: ObservableObject, Decodable, Identifiable{
+    
+    @Published var imageData: Data?
     
     var id: String?
     var alias: String?
@@ -44,6 +46,32 @@ struct Business: Decodable, Identifiable{
         case phone
         case displayPhone = "display_phone"
         case distance
+    }
+    
+    func getImageData() {
+        
+        // Check image isn't nil
+        
+        guard imageUrl != nil else{
+            return
+        }
+        
+        //Dowload the data for the image
+        let url = URL(string: imageUrl!)
+        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: url!) { data, response, error in
+            if error == nil{
+                
+                DispatchQueue.main.async {
+                    // Set image data
+                    self.imageData = data
+                }
+               
+            }
+        }
+        dataTask.resume()
+        
     }
 }
 

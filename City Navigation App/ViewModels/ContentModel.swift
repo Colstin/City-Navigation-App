@@ -16,6 +16,7 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject{
     // These hold the Restaurants or the sights data respectively
     @Published var restaurants = [Business]()
     @Published var sights = [Business]()
+    @Published var business: Business?
     
     override init() {
         // Init method of NSObject
@@ -111,6 +112,20 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject{
                 let decoder = JSONDecoder()
                 let result = try decoder.decode(BusinessSearch.self, from: data!)
                 
+                
+                //MARK: Sort Businesses (closest at top of list)
+                var sortedBusinesses = result.businesses
+                sortedBusinesses.sort { b1, b2 in
+                    return b1.distance ?? 0 < b2.distance ?? 0
+                }
+                
+                
+                // Call image function of the business
+                for b in sortedBusinesses{
+                    b.getImageData()
+                }
+                
+                
                 DispatchQueue.main.async {
                     /*
                     if category == "\(Constants.sightsKey)" {
@@ -122,9 +137,9 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject{
                     */
                     switch category{
                     case Constants.sightsKey:
-                        self.sights = result.businesses
+                        self.sights = sortedBusinesses
                     case Constants.restaurantsKey:
-                        self.restaurants = result.businesses
+                        self.restaurants = sortedBusinesses
                     default:
                         break
                     }

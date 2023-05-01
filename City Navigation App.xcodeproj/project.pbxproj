@@ -20,6 +20,7 @@
 		D676A71229FD9F5100A56486 /* BusinessList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676A71129FD9F5100A56486 /* BusinessList.swift */; };
 		D676A71429FDA49700A56486 /* BusinessListSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676A71329FDA49700A56486 /* BusinessListSectionHeader.swift */; };
 		D676A71629FDA5CE00A56486 /* BusinessListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676A71529FDA5CE00A56486 /* BusinessListSection.swift */; };
+		D6D7B2CB2A00441600F98571 /* BusinessRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D7B2CA2A00441600F98571 /* BusinessRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		D676A71129FD9F5100A56486 /* BusinessList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessList.swift; sourceTree = "<group>"; };
 		D676A71329FDA49700A56486 /* BusinessListSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListSectionHeader.swift; sourceTree = "<group>"; };
 		D676A71529FDA5CE00A56486 /* BusinessListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListSection.swift; sourceTree = "<group>"; };
+		D6D7B2CA2A00441600F98571 /* BusinessRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				D676A71129FD9F5100A56486 /* BusinessList.swift */,
 				D676A71329FDA49700A56486 /* BusinessListSectionHeader.swift */,
 				D676A71529FDA5CE00A56486 /* BusinessListSection.swift */,
+				D6D7B2CA2A00441600F98571 /* BusinessRow.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D676A71429FDA49700A56486 /* BusinessListSectionHeader.swift in Sources */,
+				D6D7B2CB2A00441600F98571 /* BusinessRow.swift in Sources */,
 				D676A6ED29FB0B9900A56486 /* LaunchView.swift in Sources */,
 				D676A70F29FD99F900A56486 /* HomeView.swift in Sources */,
 				D676A6EB29FB0B9900A56486 /* City_Navigation_App.swift in Sources */,
