@@ -17,6 +17,7 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject{
     @Published var restaurants = [Business]()
     @Published var sights = [Business]()
     @Published var business: Business?
+   
     
     override init() {
         // Init method of NSObject
@@ -124,8 +125,7 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject{
                 for b in sortedBusinesses{
                     b.getImageData()
                 }
-                
-                
+            
                 DispatchQueue.main.async {
                     /*
                     if category == "\(Constants.sightsKey)" {

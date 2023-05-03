@@ -18,7 +18,7 @@ class Business: ObservableObject, Decodable, Identifiable{
     var isClosed: Bool?
     var url: String?
     var reviewCount:Int?
-    var categores: [Category]?
+    var categories: [Category]?
     var rating: Double?
     var coordinates: Coordinate?
     var transactions: [String]?
@@ -37,7 +37,7 @@ class Business: ObservableObject, Decodable, Identifiable{
         case isClosed = "is_closed"
         case url
         case reviewCount = "review_count"
-        case categores
+        case categories
         case rating
         case coordinates
         case transactions
@@ -99,7 +99,7 @@ struct Location: Decodable{
     
 }
 
-struct Category: Decodable{
+struct Category: Decodable, Hashable{
     var alias: String?
     var title: String?
 }
