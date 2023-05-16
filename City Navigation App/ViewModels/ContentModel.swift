@@ -18,7 +18,7 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject{
     @Published var sights = [Business]()
     @Published var business: Business?
    
-    
+    //@Published  var mapLocations: [MapAnnotation] = []
     override init() {
         // Init method of NSObject
         super.init()
