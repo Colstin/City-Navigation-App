@@ -8,7 +8,7 @@
 import SwiftUI
 import MapKit
 
-struct MapAnnotation: Identifiable {
+struct MapLocation: Identifiable {
     let id = UUID()
     let title:String
     let coordinate: CLLocationCoordinate2D
@@ -17,30 +17,30 @@ struct MapAnnotation: Identifiable {
 struct BusinessMap: View {
     @EnvironmentObject var contentModel:ContentModel
     
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.999277, longitude: -115.189576), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+    @State private var region = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(
+            latitude: 35.999277,
+            longitude: -115.189576),
+        span: MKCoordinateSpan(
+            latitudeDelta: 0.5,
+            longitudeDelta: 0.5))
     
-    //@State var mapLocations = [MapAnnotation]()
-    
-    @State var title = ""
-    @State var latitude: CLLocationDegrees =  0 //35.99688
-    @State var longitude: CLLocationDegrees = 0 //-115.2053
-    
-    @State var mapLocations: [MapAnnotation] = []
     var body: some View {
-        
-//            MapAnnotation(title: "test", coordinate: CLLocationCoordinate2D(latitude: 35.99688, longitude: -115.20534))
-        
         
         ZStack(alignment: .bottomTrailing) {
             Map(coordinateRegion: $region,
                 interactionModes: MapInteractionModes.all,
                 showsUserLocation: true,
                 userTrackingMode: .constant(.follow),
-                annotationItems: mapLocations,
+                annotationItems: contentModel.mapLocations,
                 annotationContent: { location in
                     
-                MapMarker(coordinate: location.coordinate, tint: .red)
-                
+                //MapMarker(coordinate: location.coordinate, tint: .red)
+                MapAnnotation(coordinate: location.coordinate) {
+                      RoundedRectangle(cornerRadius: 5)
+                            .stroke(Color.purple, lineWidth: 4.0)
+                            .frame(width: 30, height: 30)
+                    }
                 }
             )
             .ignoresSafeArea()
@@ -63,27 +63,10 @@ struct BusinessMap: View {
             }
             .padding(.trailing, 50.0)
             .foregroundColor(.black)
+        
 
         }
-      
-    }
-    
-    
-     func getAnnotations() {
-        
-        for business in contentModel.restaurants + contentModel.sights {
-            if let lat = business.coordinates?.latitude, let long = business.coordinates?.longitude {
-                
-                latitude = lat
-                longitude = long
-            }
-        }
-    }
-    
-    func testRun() {
-        var location1 = MapAnnotation(title: "test", coordinate: CLLocationCoordinate2D(latitude: 35.99688, longitude: -115.20534))
-        
-        mapLocations.append(location1)
+       
     }
     
 }
@@ -91,5 +74,10 @@ struct BusinessMap: View {
 struct BusinessMap_Previews: PreviewProvider {
     static var previews: some View {
         BusinessMap()
+            .environmentObject(ContentModel())
     }
 }
+
+/*
+    MapAnnotation(title: "test", coordinate: CLLocationCoordinate2D(latitude: 35.99688, longitude: -115.20534))
+*/

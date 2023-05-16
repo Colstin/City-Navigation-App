@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D64F0ADA2A140366006F5ABD /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64F0AD92A140366006F5ABD /* MapAnnotation.swift */; };
+		D64F0ADA2A140366006F5ABD /* MapLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64F0AD92A140366006F5ABD /* MapLocation.swift */; };
 		D676A6EB29FB0B9900A56486 /* City_Navigation_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676A6EA29FB0B9900A56486 /* City_Navigation_App.swift */; };
 		D676A6ED29FB0B9900A56486 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676A6EC29FB0B9900A56486 /* LaunchView.swift */; };
 		D676A6EF29FB0B9900A56486 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D676A6EE29FB0B9900A56486 /* Assets.xcassets */; };
@@ -28,7 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D64F0AD92A140366006F5ABD /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
+		D64F0AD92A140366006F5ABD /* MapLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocation.swift; sourceTree = "<group>"; };
 		D676A6E729FB0B9900A56486 /* City Navigation App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "City Navigation App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D676A6EA29FB0B9900A56486 /* City_Navigation_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City_Navigation_App.swift; sourceTree = "<group>"; };
 		D676A6EC29FB0B9900A56486 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
@@ -186,7 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				D69C0E002A12DEBF00F3BDE6 /* BusinessMap.swift */,
-				D64F0AD92A140366006F5ABD /* MapAnnotation.swift */,
+				D64F0AD92A140366006F5ABD /* MapLocation.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -265,7 +265,7 @@
 				D676A71429FDA49700A56486 /* BusinessListSectionHeader.swift in Sources */,
 				D679951C2A01B43D00E6446C /* BusinessDetailView.swift in Sources */,
 				D69C0E012A12DEBF00F3BDE6 /* BusinessMap.swift in Sources */,
-				D64F0ADA2A140366006F5ABD /* MapAnnotation.swift in Sources */,
+				D64F0ADA2A140366006F5ABD /* MapLocation.swift in Sources */,
 				D6D7B2CB2A00441600F98571 /* BusinessRow.swift in Sources */,
 				D676A6ED29FB0B9900A56486 /* LaunchView.swift in Sources */,
 				D676A70F29FD99F900A56486 /* HomeView.swift in Sources */,

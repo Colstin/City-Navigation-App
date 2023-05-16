@@ -18,7 +18,8 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject{
     @Published var sights = [Business]()
     @Published var business: Business?
    
-    //@Published  var mapLocations: [MapAnnotation] = []
+    @Published var mapLocations: [MapLocation] = []
+    
     override init() {
         // Init method of NSObject
         super.init()
@@ -125,6 +126,13 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject{
                 for b in sortedBusinesses{
                     b.getImageData()
                 }
+                DispatchQueue.main.async {
+                    for b in sortedBusinesses{
+                        let place = MapLocation(title: b.name ?? "" , coordinate: CLLocationCoordinate2D(latitude: b.coordinates?.latitude ?? 0, longitude: b.coordinates?.longitude ?? 0))
+                        self.mapLocations.append(place)
+                    }
+                }
+              
             
                 DispatchQueue.main.async {
                     /*

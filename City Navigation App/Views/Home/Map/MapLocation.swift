@@ -16,7 +16,7 @@ struct MapAnnotation2: Identifiable {
     let coordinate: CLLocationCoordinate2D
 }
 
-var location:[MapAnnotation] = []
+var location:[MapLocation] = []
 
 
     /*

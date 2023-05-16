@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @EnvironmentObject var contentModel: ContentModel
+    
     @State var isMapShowing = false
     
     var body: some View {
@@ -35,6 +36,7 @@ struct HomeView: View {
                         // show map
                         BusinessMap()
                             .ignoresSafeArea()
+                            
                     }
                 }
              
