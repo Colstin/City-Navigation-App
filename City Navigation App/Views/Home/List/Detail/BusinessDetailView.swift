@@ -33,6 +33,7 @@ struct BusinessDetailView: View {
                     Text(business.isClosed! ? "Closed" : "Open")
                         .foregroundColor(.white)
                         .bold()
+                        .padding(.leading)
                 }
             }
             .ignoresSafeArea()
