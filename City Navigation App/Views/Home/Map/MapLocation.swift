@@ -8,36 +8,9 @@
 import Foundation
 import MapKit
 
-
-
-struct MapAnnotation2: Identifiable {
+//Used for the BusinessMap
+struct MapLocation: Identifiable {
     let id = UUID()
     let title:String
     let coordinate: CLLocationCoordinate2D
 }
-
-var location:[MapLocation] = []
-
-
-    /*
-    static func getLocation() -> [MapAnnotations]{
-        @EnvironmentObject var contentModel:ContentModel
-        
-        for business in contentModel.restaurants + contentModel.sights {
-            if let lat = business.coordinates?.latitude, let long = business.coordinates?.longitude {
-                
-                return [
-                    //MapAnnotations()
-                ]
-            }
-        }
-        
-        return [
-            //MapAnnotations()
-        ]
-    }
-}
-
-//extension MapAnnotations: Identifiable{}
-
-*/

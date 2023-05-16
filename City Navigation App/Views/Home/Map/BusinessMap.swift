@@ -8,12 +8,6 @@
 import SwiftUI
 import MapKit
 
-struct MapLocation: Identifiable {
-    let id = UUID()
-    let title:String
-    let coordinate: CLLocationCoordinate2D
-}
-
 struct BusinessMap: View {
     @EnvironmentObject var contentModel:ContentModel
     
@@ -37,9 +31,10 @@ struct BusinessMap: View {
                     
                 //MapMarker(coordinate: location.coordinate, tint: .red)
                 MapAnnotation(coordinate: location.coordinate) {
-                      RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color.purple, lineWidth: 4.0)
-                            .frame(width: 30, height: 30)
+                    Image(systemName: "mappin.circle.fill")
+                        .foregroundColor(.red)
+                    Text(location.title)
+                        .font(.caption)
                     }
                 }
             )
