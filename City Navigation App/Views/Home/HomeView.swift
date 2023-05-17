@@ -33,16 +33,38 @@ struct HomeView: View {
                         }
                         .padding([.top, .leading, .trailing])
                     } else {
-                        BusinessMap2(selectedBusiness: $selectedBusiness)
-                            .ignoresSafeArea()
-                            .sheet(item: $selectedBusiness) { business in
-                                
-                                //Create a business detail view instance
-                                // Pass in selected business
-                                BusinessDetailView(business: business)
-                               
+                        
+                        ZStack(alignment: .top) {
+                            // Show map
+                            BusinessMap2(selectedBusiness: $selectedBusiness)
+                                .ignoresSafeArea()
+                                .sheet(item: $selectedBusiness) { business in
+                                    
+                                    //Create a business detail view instance
+                                    // Pass in selected business
+                                    BusinessDetailView(business: business)
                             }
+                            
+                            // Rectangle Overlay
+                            ZStack{
+                                Rectangle()
+                                    .foregroundColor(.white)
+                                    .cornerRadius(5)
+                                    .frame(height: 48)
                                 
+                                HStack{
+                                    Image(systemName: "location")
+                                    Text("Enterprise, NV")
+                                    Spacer()
+                                    Button("Switch to map view") {
+                                        isMapShowing = false
+                                    }
+                                }
+                                .padding()
+
+                            }
+                            .padding()
+                        }
                     }
                 }
              
