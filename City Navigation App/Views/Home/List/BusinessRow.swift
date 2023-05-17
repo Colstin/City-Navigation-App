@@ -27,6 +27,7 @@ struct BusinessRow: View {
                 //Name and distance
                 VStack(alignment: .leading){
                     Text(business.name ?? "Business Name ")
+                        .multilineTextAlignment(.leading)
                         .bold()
                     Text(String(format: "%.1f miles away", (business.distance ?? 0)*0.000621 ))
                         .font(.caption)

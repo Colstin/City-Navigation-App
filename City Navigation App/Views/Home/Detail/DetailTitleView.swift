@@ -17,8 +17,8 @@ struct DetailTitleView: View {
             //Business Name
             Text(business.name!)
                 .font(.largeTitle)
-                .padding(.bottom)
                 .foregroundColor(.black)
+                .multilineTextAlignment(.leading)
             
             //Address     (We have to do this because API stores this in an array)
             if business.location?.displayAddress != nil{

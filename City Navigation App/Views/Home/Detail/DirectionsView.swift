@@ -28,9 +28,10 @@ struct DirectionsView: View {
                         
                 }
             }
-            .padding(.horizontal)
+            .padding([.top, .leading, .trailing])
             // Directions map
-            
+            DirectionsMap()
+                .ignoresSafeArea(.all, edges: .bottom)
             
         }
     }

@@ -11,6 +11,7 @@
 		D64F0ADC2A14507E006F5ABD /* BusinessMap2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64F0ADB2A14507E006F5ABD /* BusinessMap2.swift */; };
 		D64F0ADE2A154DFC006F5ABD /* DirectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64F0ADD2A154DFC006F5ABD /* DirectionsView.swift */; };
 		D64F0AE02A154F79006F5ABD /* DetailTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64F0ADF2A154F79006F5ABD /* DetailTitleView.swift */; };
+		D64F0AE22A155D3A006F5ABD /* DirectionsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64F0AE12A155D3A006F5ABD /* DirectionsMap.swift */; };
 		D676A6EB29FB0B9900A56486 /* City_Navigation_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676A6EA29FB0B9900A56486 /* City_Navigation_App.swift */; };
 		D676A6ED29FB0B9900A56486 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676A6EC29FB0B9900A56486 /* LaunchView.swift */; };
 		D676A6EF29FB0B9900A56486 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D676A6EE29FB0B9900A56486 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		D64F0ADB2A14507E006F5ABD /* BusinessMap2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMap2.swift; sourceTree = "<group>"; };
 		D64F0ADD2A154DFC006F5ABD /* DirectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsView.swift; sourceTree = "<group>"; };
 		D64F0ADF2A154F79006F5ABD /* DetailTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTitleView.swift; sourceTree = "<group>"; };
+		D64F0AE12A155D3A006F5ABD /* DirectionsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsMap.swift; sourceTree = "<group>"; };
 		D676A6E729FB0B9900A56486 /* City Navigation App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "City Navigation App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D676A6EA29FB0B9900A56486 /* City_Navigation_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City_Navigation_App.swift; sourceTree = "<group>"; };
 		D676A6EC29FB0B9900A56486 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				D64F0ADB2A14507E006F5ABD /* BusinessMap2.swift */,
+				D64F0AE12A155D3A006F5ABD /* DirectionsMap.swift */,
 				D69C0E002A12DEBF00F3BDE6 /* BusinessMap.swift */,
 			);
 			path = Map;
@@ -273,6 +276,7 @@
 			files = (
 				D676A71429FDA49700A56486 /* BusinessListSectionHeader.swift in Sources */,
 				D679951C2A01B43D00E6446C /* BusinessDetailView.swift in Sources */,
+				D64F0AE22A155D3A006F5ABD /* DirectionsMap.swift in Sources */,
 				D69C0E012A12DEBF00F3BDE6 /* BusinessMap.swift in Sources */,
 				D64F0ADA2A140366006F5ABD /* MapLocation.swift in Sources */,
 				D64F0AE02A154F79006F5ABD /* DetailTitleView.swift in Sources */,
