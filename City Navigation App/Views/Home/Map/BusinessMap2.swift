@@ -35,6 +35,8 @@ struct BusinessMap2: UIViewRepresentable {
     
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
+        mapView.delegate = context.coordinator
+        
         
         //make user show on map
         mapView.showsUserLocation = true
@@ -51,8 +53,40 @@ struct BusinessMap2: UIViewRepresentable {
         uiView.showAnnotations(self.locations, animated: true) // This one starts zoomed in
         //uiView.addAnnotations(self.locations)
     }
+    
     static func dismantleUIView(_ uiView: MKMapView, coordinator: ()) {
         uiView.removeAnnotations(uiView.annotations)
     }
     
+    //MARK: Coordinator class
+    func makeCoordinator() -> Coordinator {
+        return Coordinator()
+    }
+    
+    class Coordinator: NSObject, MKMapViewDelegate {
+        
+        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+            
+            // User Location Blue dot stays
+            if annotation is MKUserLocation {
+                return nil
+            }
+            
+            // Create annotation Detail View when clicked
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: Constants.annotationReuseId)
+            
+            // This makes everything resuable 
+            if annotationView == nil {
+                // Create new one
+                annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: Constants.annotationReuseId)
+                
+                annotationView!.canShowCallout = true
+                annotationView!.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            } else {
+                annotationView!.annotation = annotation
+            }
+            
+            return annotationView
+        }
+    }
 }
