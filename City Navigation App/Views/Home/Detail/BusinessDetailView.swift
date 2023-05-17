@@ -10,6 +10,7 @@ import SwiftUI
 struct BusinessDetailView: View {
     
     var business: Business
+    @State private var showDirections = false
     
     var body: some View {
         
@@ -43,11 +44,11 @@ struct BusinessDetailView: View {
               DetailGroupView(business: business)
    
             }
-            .padding(.horizontal)
+           
             
-            // Get Directions Button
+            // MARK: Directions Button
             Button {
-                //TODO: show directions
+                showDirections = true
             } label: {
                 ZStack{
                     Rectangle()
@@ -59,12 +60,12 @@ struct BusinessDetailView: View {
                 .foregroundColor(.blue)
                 .cornerRadius(10)
                 .padding(.horizontal)
+                .sheet(isPresented: $showDirections) {
+                    DirectionsView(business: business)
+                }
           
             }
-
-        }
-            
-        
+        } //Vstack
     }
 }
 
