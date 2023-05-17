@@ -33,10 +33,9 @@ struct HomeView: View {
                         }
                         .padding([.top, .leading, .trailing])
                     } else {
-                        // show map
-                        BusinessMap()
+                        BusinessMap2()
                             .ignoresSafeArea()
-                            
+                                
                     }
                 }
              

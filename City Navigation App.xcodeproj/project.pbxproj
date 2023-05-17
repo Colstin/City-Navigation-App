@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D64F0ADA2A140366006F5ABD /* MapLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64F0AD92A140366006F5ABD /* MapLocation.swift */; };
+		D64F0ADC2A14507E006F5ABD /* BusinessMap2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64F0ADB2A14507E006F5ABD /* BusinessMap2.swift */; };
 		D676A6EB29FB0B9900A56486 /* City_Navigation_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676A6EA29FB0B9900A56486 /* City_Navigation_App.swift */; };
 		D676A6ED29FB0B9900A56486 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676A6EC29FB0B9900A56486 /* LaunchView.swift */; };
 		D676A6EF29FB0B9900A56486 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D676A6EE29FB0B9900A56486 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		D64F0AD92A140366006F5ABD /* MapLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocation.swift; sourceTree = "<group>"; };
+		D64F0ADB2A14507E006F5ABD /* BusinessMap2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMap2.swift; sourceTree = "<group>"; };
 		D676A6E729FB0B9900A56486 /* City Navigation App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "City Navigation App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D676A6EA29FB0B9900A56486 /* City_Navigation_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City_Navigation_App.swift; sourceTree = "<group>"; };
 		D676A6EC29FB0B9900A56486 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			children = (
 				D69C0E002A12DEBF00F3BDE6 /* BusinessMap.swift */,
 				D64F0AD92A140366006F5ABD /* MapLocation.swift */,
+				D64F0ADB2A14507E006F5ABD /* BusinessMap2.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				D676A70F29FD99F900A56486 /* HomeView.swift in Sources */,
 				D676A6EB29FB0B9900A56486 /* City_Navigation_App.swift in Sources */,
 				D676A6FC29FB0DD000A56486 /* ContentModel.swift in Sources */,
+				D64F0ADC2A14507E006F5ABD /* BusinessMap2.swift in Sources */,
 				D679951E2A01CFAC00E6446C /* DetailGroupView.swift in Sources */,
 				D676A70829FC58AA00A56486 /* Business.swift in Sources */,
 				D676A71229FD9F5100A56486 /* BusinessList.swift in Sources */,
