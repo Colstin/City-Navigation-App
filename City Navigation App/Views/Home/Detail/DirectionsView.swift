@@ -4,6 +4,10 @@
 //
 //  Created by Colstin Donaldson on 5/17/23.
 //
+//MARK: ENCODING for LINKs
+/*
+ Methods like addingPercentEncoding encode characters such as spaces and apostrophes, which cannot be directly used in URLs.
+ */
 
 import SwiftUI
 
@@ -30,7 +34,7 @@ struct DirectionsView: View {
             }
             .padding([.top, .leading, .trailing])
             // Directions map
-            DirectionsMap()
+            DirectionsMap(business: business)
                 .ignoresSafeArea(.all, edges: .bottom)
             
         }
