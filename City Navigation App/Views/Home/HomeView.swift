@@ -10,8 +10,8 @@ import SwiftUI
 struct HomeView: View {
     
     @EnvironmentObject var contentModel: ContentModel
-    
     @State var isMapShowing = false
+    @State var selectedBusiness:Business?
     
     var body: some View {
         VStack {
@@ -33,8 +33,15 @@ struct HomeView: View {
                         }
                         .padding([.top, .leading, .trailing])
                     } else {
-                        BusinessMap2()
+                        BusinessMap2(selectedBusiness: $selectedBusiness)
                             .ignoresSafeArea()
+                            .sheet(item: $selectedBusiness) { business in
+                                
+                                //Create a business detail view instance
+                                // Pass in selected business
+                                BusinessDetailView(business: business)
+                               
+                            }
                                 
                     }
                 }
