@@ -174,9 +174,7 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject{
                 
             } catch {
                 print(error)
-            }
-   
-            
+            } 
         }
         dataTask.resume()
     }

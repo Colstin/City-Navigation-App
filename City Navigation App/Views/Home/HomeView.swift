@@ -65,8 +65,11 @@ struct HomeView: View {
                                     Image(systemName: "location")
                                     Text(contentModel.placemark?.subLocality ?? "Current City")
                                     Spacer()
-                                    Button("Switch to map view") {
+                                    Button {
                                         isMapShowing = false
+                                    } label: {
+                                        Text("Switch to map view")
+                                            .font(.subheadline)
                                     }
                                 }
                                 .padding()

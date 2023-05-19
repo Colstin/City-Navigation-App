@@ -23,7 +23,6 @@ struct BusinessListSection: View {
                     BusinessRow(business: business)
 
                 }
-
             }
         }
     }

@@ -60,12 +60,9 @@ struct BusinessMap: View {
             }
             .padding(.trailing, 50.0)
             .foregroundColor(.black)
-        
 
         }
-       
     }
-    
 }
 
 struct BusinessMap_Previews: PreviewProvider {

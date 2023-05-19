@@ -113,7 +113,6 @@ struct BusinessMap2: UIViewRepresentable {
                     return
                 }
             }
-        }
-        
+        }   
     }
 }

@@ -26,7 +26,6 @@ struct LaunchView: View {
             // if denied show denied view
             LocationDeniedView()
         }
-
     }
 }
 
