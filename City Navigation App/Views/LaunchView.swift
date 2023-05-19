@@ -17,13 +17,14 @@ struct LaunchView: View {
         // Detect the authorization status of geolocationg the user
         if contentModel.authorizationState == .notDetermined{
             // If undetermined, show onboarding
+            OnboardingView()
             
         } else if contentModel.authorizationState == .authorizedAlways || contentModel.authorizationState == .authorizedWhenInUse{
             // if approved, show home view
             HomeView()
         } else {
             // if denied show denied view
-
+            LocationDeniedView()
         }
 
     }

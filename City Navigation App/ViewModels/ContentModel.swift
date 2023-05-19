@@ -29,10 +29,15 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject{
         
         
         // Request Permission from user
-        locationManager.requestWhenInUseAuthorization()
-        
-       
+        //locationManager.requestWhenInUseAuthorization()
     }
+    
+    func requestGeolocationPermission() {
+        // Request Permission from user
+        locationManager.requestWhenInUseAuthorization()
+    }
+    
+    
     
     // MARK:  Location manager Delegate methods
     //To FIND: type didchange
