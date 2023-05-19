@@ -20,6 +20,7 @@ struct DetailTitleView: View {
                 .foregroundColor(.black)
                 .multilineTextAlignment(.leading)
                 .bold()
+        
             
             //Address     (We have to do this because API stores this in an array)
             if business.location?.displayAddress != nil{
@@ -42,10 +43,7 @@ struct DetailTitleView: View {
                     .frame(height: 46)
                     .padding(.trailing, -20)
             }
-           
-           
-        }
-        
+        } 
     }
 }
 

@@ -42,7 +42,6 @@ struct BusinessDetailView: View {
             
             Group{
               DetailGroupView(business: business)
-   
             }
            
             

@@ -20,7 +20,7 @@ struct DetailGroupView: View {
                 .padding(.horizontal)
                 
             
-            ScrollView{
+            ScrollView(showsIndicators: false){
                 //Phone
                 HStack{
                     Text("Phone: ")
@@ -62,8 +62,7 @@ struct DetailGroupView: View {
             }
             .padding(.horizontal)
         }
-        
-   
+       
     }
 }
 

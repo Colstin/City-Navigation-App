@@ -14,6 +14,7 @@ import SwiftUI
 struct DirectionsView: View {
     
     var business: Business
+ 
     
     var body: some View {
         
@@ -21,6 +22,7 @@ struct DirectionsView: View {
             
             // Business title
             HStack {
+                
                 DetailTitleView(business: business)
                 Spacer()
                 
