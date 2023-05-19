@@ -21,7 +21,7 @@ struct DirectionsView: View {
         VStack(alignment: .leading){
             
             // Business title
-            HStack {
+            ZStack(alignment: .trailing) {
                 
                 DetailTitleView(business: business)
                 Spacer()
@@ -31,7 +31,7 @@ struct DirectionsView: View {
                    let name = business.name?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed){
                     
                     Link("Open in Maps", destination: URL(string: "http://maps.apple.com/?ll=\(lat),\(long)&q=\(name)")!)
-                        
+                               
                 }
             }
             .padding([.top, .leading, .trailing])
