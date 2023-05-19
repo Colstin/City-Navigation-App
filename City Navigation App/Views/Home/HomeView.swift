@@ -68,7 +68,7 @@ struct HomeView: View {
                                     Button {
                                         isMapShowing = false
                                     } label: {
-                                        Text("Switch to map view")
+                                        Text("Switch to list view")
                                             .font(.subheadline)
                                     }
                                 }
