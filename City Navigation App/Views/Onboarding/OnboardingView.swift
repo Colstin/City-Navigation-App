@@ -19,38 +19,20 @@ struct OnboardingView: View {
         VStack{
             // Tab View
             TabView(selection: $tabSelection) {
-                
                 // First tab
-                VStack(spacing: 20){
-                    Image("city1")
-                        .resizable()
-                        .scaledToFit()
-                        
-                    Text("Welcome to City Navigation!")
-                        .bold()
-                        .font(.title)
-                    Text("City Navigation helps you find the best of the city!")
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal)
-                }
+                OnboardingTab(
+                    imageText: "city1",
+                    titleText: "Welcome to City Navigation!",
+                    descText: "City Navigation helps you find the best of the city!"
+                )
                 .tag(0)
-                
-                // Second tab
-                VStack(spacing: 20){
-                    Image("wifi")
-                        .resizable()
-                        .scaledToFit()
-                        .ignoresSafeArea(.all)
-                        
-                    Text("Ready to discover your city?")
-                        .bold()
-                        .font(.title)
-                    Text("We'll show you the best restaurants, venues and more, based on your location!")
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal)
-                     
-                }
-               
+                      
+                // Second Tab
+               OnboardingTab(
+                    imageText: "wifi",
+                    titleText: "Ready to discover your city?",
+                    descText: "We'll show you the best restaurants, venues and more, based on your location!"
+               )
                 .tag(1)
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
