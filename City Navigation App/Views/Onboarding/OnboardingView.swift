@@ -56,7 +56,7 @@ struct OnboardingView: View {
                         .cornerRadius(10)
                     
                     Text(tabSelection == 0 ? "Next" : "Get My Location")
-                         .font(.title3)
+                        .font(.title3)
                         .bold()
                         .padding()
                         .foregroundColor(tabSelection == 0 ? green : blue)

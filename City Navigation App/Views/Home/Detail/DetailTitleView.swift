@@ -16,9 +16,10 @@ struct DetailTitleView: View {
         VStack(alignment: .leading){
             //Business Name
             Text(business.name!)
-                .font(.largeTitle)
+                .font(.title2)
                 .foregroundColor(.black)
                 .multilineTextAlignment(.leading)
+                .bold()
             
             //Address     (We have to do this because API stores this in an array)
             if business.location?.displayAddress != nil{
@@ -28,11 +29,21 @@ struct DetailTitleView: View {
                 }
             }
            
-            //Ratings/ Reviews
-            Image("regular_\(business.rating ?? 0)")
-            Link(destination: URL(string: "\(business.url ?? "No Website Available")")!) {
-                Text("\(business.reviewCount ?? 0 ) Reviews")
+            HStack{
+                VStack{
+                    //Ratings/ Reviews
+                    Image("regular_\(business.rating ?? 0)")
+                    Link(destination: URL(string: "\(business.url ?? "No Website Available")")!) {
+                        Text("\(business.reviewCount ?? 0 ) Reviews")
+                    }
+                }
+                Spacer()
+                YelpAttribution(link: business.url ?? "https://yelp.ca")
+                    .frame(height: 46)
+                    .padding(.trailing, -20)
             }
+           
+           
         }
         
     }

@@ -8,8 +8,52 @@
 import SwiftUI
 
 struct LocationDeniedView: View {
+    
+    let backgroundColor = Color(red: 34/255, green: 141/255, blue: 138/255)
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 10) {
+            
+            Spacer()
+            Text("Whoops!")
+                .bold()
+                .font(.title)
+            Text("We need to access your location to provide you with the best sights in the city. You can change your decision at any time in settings.")
+                .multilineTextAlignment(.center)
+         
+                
+            Spacer()
+            
+            Button {
+                // Open Settings
+                if let url = URL(string: UIApplication.openSettingsURLString){
+                    
+                    if UIApplication.shared.canOpenURL(url){
+                        UIApplication.shared.open(url)
+                    }
+                }
+            } label: {
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .frame(height: 48)
+       
+                    Text("Go to settings")
+                        .foregroundColor(backgroundColor)
+                        .bold()
+                        .font(.title3)
+                }
+                .padding(.horizontal, 30)
+            }
+            Spacer()
+                //MARK: ?? WEIRD PADDING TRICK ??
+               // .padding(.bottom)
+            
+        }
+        .background(backgroundColor)
+        .foregroundColor(.white)
+        //.ignoresSafeArea(.all, edges: .all)
     }
 }
 

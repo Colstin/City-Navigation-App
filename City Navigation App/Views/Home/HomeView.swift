@@ -29,7 +29,16 @@ struct HomeView: View {
                                 }
                             }
                             Divider()
-                            BusinessList()
+                            ZStack(alignment: .top) {
+                                BusinessList()
+                                
+                                HStack{
+                                    Spacer()
+                                    YelpAttribution(link: "https://yelp.ca")
+                                        .frame(height: 36)
+                                        .padding(.trailing, -20)
+                                }
+                            }
                         }
                         .padding([.top, .leading, .trailing])
                     } else {
