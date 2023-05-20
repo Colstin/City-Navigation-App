@@ -10,7 +10,7 @@
 - MVVM architecture 
 - IOS 16+ 
 
-                                            Onboarding Screen
+                                          Onboarding Screen
 <div align="center">
 <img height="400" alt="CNA1" title="CNA1" src="https://github.com/Colstin/City-Navigation-App/assets/96356901/b2e8ab32-3555-484e-902c-c07ae10aa969">
 &nbsp;
@@ -38,7 +38,7 @@
 </div>
 <br />
 
-                                                    Map View 
+                                              Map View 
 <div align="center">
 <img height="400" alt="Main Map Screen" title="CNA-MAP1" src="https://github.com/Colstin/City-Navigation-App/assets/96356901/3436b4c1-fc1c-45d6-864f-1148d73aac51">
 &nbsp;
